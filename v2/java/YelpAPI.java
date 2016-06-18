@@ -36,10 +36,10 @@ public class YelpAPI {
    * Update OAuth credentials below from the Yelp Developers API site:
    * http://www.yelp.com/developers/getting_started/api_access
    */
-  private static final String CONSUMER_KEY = "";
-  private static final String CONSUMER_SECRET = "";
-  private static final String TOKEN = "";
-  private static final String TOKEN_SECRET = "";
+  private static final String CONSUMER_KEY = "UEVlH1jrUNYZHa4KiFJXRQ";
+  private static final String CONSUMER_SECRET = "a5UgSgYM82sXmTvWr172ctnzAeg";
+  private static final String TOKEN = "ULCz-Qb3_wumx6zn0pp3GdSlOWcnmi6U";
+  private static final String TOKEN_SECRET = "HT6Cg3TEC0VedyraC6KPyfbZ8bc";
 
   OAuthService service;
   Token accessToken;
@@ -53,9 +53,7 @@ public class YelpAPI {
    * @param tokenSecret Token secret
    */
   public YelpAPI(String consumerKey, String consumerSecret, String token, String tokenSecret) {
-    this.service =
-        new ServiceBuilder().provider(TwoStepOAuth.class).apiKey(consumerKey)
-            .apiSecret(consumerSecret).build();
+    this.service = new ServiceBuilder().provider(TwoStepOAuth.class).apiKey(consumerKey).apiSecret(consumerSecret).build();
     this.accessToken = new Token(token, tokenSecret);
   }
 
